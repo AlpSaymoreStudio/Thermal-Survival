@@ -1,0 +1,28 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "ac:fabric"
+    },
+
+    
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "XYX",
+      "YXY",
+      "XYX"
+    ],
+    "key": {
+      "X": {
+        "item": "minecraft:wool"
+      },
+      "Y": {
+        "item": "minecraft:string"
+      }
+    },
+    "result": {
+      "item": "ac:fabric",
+      "count": 3
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+	"format_version": "1.20.50",
+	"minecraft:item": {
+		"description": {
+			"identifier": "ac:sewing_tool",
+			"menu_category": { 
+			  	"category": "items"
+			} 
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "sewing_tool"
+			},
+			"minecraft:durability": {
+				"max_durability": 64
+			},
+            "minecraft:max_stack_size":  1
+		}
+	}
+}

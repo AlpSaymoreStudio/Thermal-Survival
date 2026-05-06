@@ -1,0 +1,153 @@
+{
+    "format_version": "1.21.0",
+    "minecraft:block": {
+        "description": {
+            "identifier": "ts:red_sand_pile",
+            "menu_category": {
+                "category": "nature"
+            },
+            "states": {
+                "ts:pile_height": [
+                    2,
+                    4,
+                    6,
+                    8,
+                    10,
+                    12,
+                    14
+                ]
+            }
+        },
+        "permutations": [
+            {
+                "condition": "q.block_state('ts:pile_height') == 2",
+                "components": {
+                    "minecraft:collision_box": {
+                        "origin": [
+                            -8,
+                            0,
+                            -8
+                        ],
+                        "size": [
+                            16,
+                            2,
+                            16
+                        ]
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -8,
+                            0,
+                            -8
+                        ],
+                        "size": [
+                            16,
+                            2,
+                            16
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('ts:pile_height') == 4",
+                "components": {
+                    "minecraft:collision_box": {
+                        "origin": [
+                            -8,
+                            0,
+                            -8
+                        ],
+                        "size": [
+                            16,
+                            4,
+                            16
+                        ]
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -8,
+                            0,
+                            -8
+                        ],
+                        "size": [
+                            16,
+                            4,
+                            16
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('ts:pile_height') == 6",
+                "components": {
+                    "minecraft:collision_box": {
+                        "origin": [
+                            -8,
+                            0,
+                            -8
+                        ],
+                        "size": [
+                            16,
+                            6,
+                            16
+                        ]
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -8,
+                            0,
+                            -8
+                        ],
+                        "size": [
+                            16,
+                            6,
+                            16
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('ts:pile_height') == 8",
+                "components": {
+                    "minecraft:collision_box": {
+                        "origin": [
+                            -8,
+                            0,
+                            -8
+                        ],
+                        "size": [
+                            16,
+                            8,
+                            16
+                        ]
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -8,
+                            0,
+                            -8
+                        ],
+                        "size": [
+                            16,
+                            8,
+                            16
+                        ]
+                    }
+                }
+            }
+        ],
+        "components": {
+            "minecraft:display_name": "tile.ts:red_sand_pile.name",
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 0.3
+            },
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "minecraft:red_sand",
+                    "render_method": "opaque"
+                }
+            },
+            "minecraft:map_color": "#be6621"
+        }
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "format_version": "1.21.0",
+    "minecraft:recipe_shapeless": {
+        "description": { "identifier": "ts:fur_padding_from_polar_bear" },
+        "tags": ["crafting_table"],
+        "ingredients": [{ "item": "ts:polar_bear_fur_tuft" }],
+        "result": { "item": "ts:fur_padding", "count": 2 }
+    }
+}

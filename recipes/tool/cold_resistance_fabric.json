@@ -1,0 +1,27 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "ac:cold_resistance_fabric"
+    },
+
+    
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "XY",
+      "YY"
+    ],
+    "key": {
+      "X": {
+        "item": "minecraft:magma_cream"
+      },
+      "Y": {
+        "item": "ac:fabric"
+      }
+    },
+    "result": {
+      "item": "ac:cold_resistance_fabric",
+      "count": 3
+    }
+  }
+}

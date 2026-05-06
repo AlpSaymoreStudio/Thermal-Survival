@@ -1,0 +1,12 @@
+{
+    "format_version": "1.21.0",
+    "minecraft:recipe_shaped": {
+        "description": { "identifier": "ts:turtle_helmet" },
+        "tags": ["crafting_table"],
+        "pattern": ["SSS", "S S"],
+        "key": {
+            "S": { "item": "minecraft:scute" }
+        },
+        "result": { "item": "ts:turtle_helmet" }
+    }
+}

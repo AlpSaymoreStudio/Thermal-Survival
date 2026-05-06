@@ -1,0 +1,93 @@
+{
+    "format_version": "1.18.10",
+    "minecraft:entity": {
+      "description": {
+        "identifier": "ac:rangefinder_distance",
+        "is_spawnable": false,
+        "is_summonable": true,
+        "is_experimental": false,
+        "properties": {
+          "ac:distance": {
+            "type": "float", 
+            "range": [0.0, 128.0], 
+            "default": 0.0,
+            "client_sync": true 
+          },
+          "ac:animation": {
+            "type": "float", 
+            "range": [0.0, 1.0], 
+            "default": 0.0,
+            "client_sync": true 
+          },
+          "ac:direction_x": {
+            "type": "float", 
+            "range": [-1.0, 1.0], 
+            "default": 0.0,
+            "client_sync": true 
+          },
+          "ac:direction_y": {
+            "type": "float", 
+            "range": [-1.0, 1.0], 
+            "default": 0.0,
+            "client_sync": true 
+          },
+          "ac:direction_z": {
+            "type": "float", 
+            "range": [-1.0, 1.0], 
+            "default": 0.0,
+            "client_sync": true 
+          },
+          "ac:show": {
+            "type": "bool", 
+            "default": false,
+            "client_sync": true 
+          }
+        }
+      },
+  
+      "component_groups": {
+        "set_despawn": {
+          "minecraft:instant_despawn":{}
+        }
+      },
+      
+      "components": {
+        "minecraft:collision_box": {
+          "width": 0.0,
+          "height": 0.0
+          },
+        "minecraft:health": {
+          "value": 1,
+          "max": 1
+        },
+        "minecraft:fire_immune": {},
+        "minecraft:type_family": {
+            "family": [ "inanimate" ]
+        },
+        "minecraft:damage_sensor": {
+          "triggers": {
+            "deals_damage": false
+          }
+        },
+        "minecraft:pushable": {
+          "is_pushable": false,
+          "is_pushable_by_piston": false
+        },
+        "minecraft:physics": {
+          "has_gravity": false,
+          "has_collision": false
+        },
+        "minecraft:movement": {
+          "value": 0.0
+        }
+      },
+  
+      "events": {
+        "despawn": {
+          "add": {
+            "component_groups": [ "set_despawn" ]
+          }
+        }
+      }
+    }
+  }

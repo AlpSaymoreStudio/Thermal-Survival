@@ -1,0 +1,13 @@
+{
+    "format_version": "1.21.0",
+    "minecraft:recipe_shaped": {
+        "description": { "identifier": "ts:cactus_juice" },
+        "tags": ["crafting_table"],
+        "pattern": ["C", "B"],
+        "key": {
+            "C": { "item": "minecraft:cactus" },
+            "B": { "item": "minecraft:glass_bottle" }
+        },
+        "result": { "item": "ts:cactus_juice", "count": 2 }
+    }
+}

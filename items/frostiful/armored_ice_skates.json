@@ -1,0 +1,16 @@
+{
+    "format_version": "1.21.0",
+    "minecraft:item": {
+        "description": {
+            "identifier": "ts:armored_ice_skates",
+            "menu_category": { "category": "equipment" }
+        },
+        "components": {
+            "minecraft:display_name": { "value": "Armored Ice Skates" },
+            "minecraft:icon": { "texture": "ts_armored_ice_skates" },
+            "minecraft:max_stack_size": 1,
+            "minecraft:wearable": { "dispensable": true, "slot": "slot.armor.feet", "protection": 3 },
+            "minecraft:durability": { "max_durability": 320 }
+        }
+    }
+}

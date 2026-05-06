@@ -1,0 +1,27 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "ac:heat_resistance_fabric"
+    },
+
+    
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "XY",
+      "YY"
+    ],
+    "key": {
+      "X": {
+        "item": "minecraft:blue_ice"
+      },
+      "Y": {
+        "item": "ac:fabric"
+      }
+    },
+    "result": {
+      "item": "ac:heat_resistance_fabric",
+      "count": 3
+    }
+  }
+}

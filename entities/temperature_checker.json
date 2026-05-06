@@ -1,0 +1,142 @@
+{
+    "format_version": "1.18.10",
+    "minecraft:entity": {
+      "description": {
+        "identifier": "ac:temperature_checker",
+        "is_spawnable": false,
+        "is_summonable": true,
+        "is_experimental": false,
+        "properties": {
+          "ac:temperature": {
+            "type": "int", 
+            "range": [-101, 200], 
+            "default": -101,
+            "client_sync": true 
+          },
+          "ac:light_level": {
+            "type": "int", 
+            "range": [-1, 16], 
+            "default": -1,
+            "client_sync": true 
+          },
+          "ac:brightness_level": {
+            "type": "int", 
+            "range": [-1, 32], 
+            "default": -1,
+            "client_sync": true 
+          },
+          "ac:temperature_type": {
+            "type": "int", 
+            "range": [-1, 3], 
+            "default": -1,
+            "client_sync": true 
+          },
+          "ac:is_underground": {
+            "type": "bool", 
+            "default": false,
+            "client_sync": true 
+          },
+          "ac:is_in_river": {
+            "type": "bool", 
+            "default": false,
+            "client_sync": true 
+          },
+          "ac:in_water_or_rain": {
+            "type": "bool", 
+            "default": false,
+            "client_sync": true 
+          }
+        }
+      },
+  
+      "component_groups": {
+        "set_despawn": {
+          "minecraft:instant_despawn":{}
+        }
+      },
+      
+      "components": {
+        "minecraft:collision_box": {
+          "width": 0.0,
+          "height": 0.0
+          },
+        "minecraft:health": {
+          "value": 1,
+          "max": 1
+        },
+        "minecraft:fire_immune": {},
+        "minecraft:type_family": {
+            "family": [ "inanimate" ]
+        },
+        "minecraft:damage_sensor": {
+          "triggers": {
+            "deals_damage": false
+          }
+        },
+        "minecraft:pushable": {
+          "is_pushable": false,
+          "is_pushable_by_piston": false
+        },
+        "minecraft:physics": {
+          "has_gravity": false,
+          "has_collision": false
+        },
+        "minecraft:movement": {
+          "value": 0.0
+        },
+        "minecraft:timer": {
+            "time": [ 5, 5 ],
+            "time_down_event": {
+                "event": "despawn"
+            }
+        }
+      },
+  
+      "events": {
+        "minecraft:entity_spawned": {
+          "sequence": [
+            {
+              "sequence": [
+                {"filters":{"test":"is_temperature_value","subject":"self","operator":">=","value":-1},"set_property":{"ac:temperature":-100}},{"filters":{"test":"is_temperature_value","subject":"self","operator":">=","value":-0.95},"set_property":{"ac:temperature":-95}},{"filters":{"test":"is_temperature_value","subject":"self","operator":">=","value":-0.9},"set_property":{"ac:temperature":-90}},{"filters":{"test":"is_temperature_value","subject":"self","operator":">=","value":-0.85},"set_property":{"ac:temperature":-85}},{"filters":{"test":"is_temperature_value","subject":"self","operator":">=","value":-0.8},"set_property":{"ac:temperature":-80}},{"filters":{"test":"is_temperature_value","subject":"self","operator":">=","value":-0.75},"set_property":{"ac:temperature":-75}},{"filters":{"test":"is_temperature_value","subject":"self","operator":">=","value":-0.7},"set_property":{"ac:temperature":-70}},{"filters":{"test":"is_temperature_value","subject":"self","operator":">=","value":-0.65},"set_property":{"ac:temperature":-65}},{"filters":{"test":"is_temperature_value","subject":"self","operator":">=","value":-0.6},"set_property":{"ac:temperature":-60}},{"filters":{"test":"is_temperature_value","subject":"self","operator":">=","value":-0.55},"set_property":{"ac:temperature":-55}},{"filters":{"test":"is_temperature_value","subject":"self","operator":">=","value":-0.5},"set_property":{"ac:temperature":-50}},{"filters":{"test":"is_temperature_value","subject":"self","operator":">=","value":-0.45},"set_property":{"ac:temperature":-45}},{"filters":{"test":"is_temperature_value","subject":"self","operator":">=","value":-0.4},"set_property":{"ac:temperature":-40}},{"filters":{"test":"is_temperature_value","subject":"self","operator":">=","value":-0.35},"set_property":{"ac:temperature":-35}},{"filters":{"test":"is_temperature_value","subject":"self","operator":">=","value":-0.3},"set_property":{"ac:temperature":-30}},{"filters":{"test":"is_temperature_value","subject":"self","operator":">=","value":-0.25},"set_property":{"ac:temperature":-25}},{"filters":{"test":"is_temperature_value","subject":"self","operator":">=","value":-0.2},"set_property":{"ac:temperature":-20}},{"filters":{"test":"is_temperature_value","subject":"self","operator":">=","value":-0.15},"set_property":{"ac:temperature":-15}},{"filters":{"test":"is_temperature_value","subject":"self","operator":">=","value":-0.1},"set_property":{"ac:temperature":-10}},{"filters":{"test":"is_temperature_value","subject":"self","operator":">=","value":-0.05},"set_property":{"ac:temperature":-5}},{"filters":{"test":"is_temperature_value","subject":"self","operator":">=","value":0},"set_property":{"ac:temperature":0}},{"filters":{"test":"is_temperature_value","subject":"self","operator":">=","value":0.05},"set_property":{"ac:temperature":5}},{"filters":{"test":"is_temperature_value","subject":"self","operator":">=","value":0.1},"set_property":{"ac:temperature":10}},{"filters":{"test":"is_temperature_value","subject":"self","operator":">=","value":0.15},"set_property":{"ac:temperature":15}},{"filters":{"test":"is_temperature_value","subject":"self","operator":">=","value":0.2},"set_property":{"ac:temperature":20}},{"filters":{"test":"is_temperature_value","subject":"self","operator":">=","value":0.25},"set_property":{"ac:temperature":25}},{"filters":{"test":"is_temperature_value","subject":"self","operator":">=","value":0.3},"set_property":{"ac:temperature":30}},{"filters":{"test":"is_temperature_value","subject":"self","operator":">=","value":0.35},"set_property":{"ac:temperature":35}},{"filters":{"test":"is_temperature_value","subject":"self","operator":">=","value":0.4},"set_property":{"ac:temperature":40}},{"filters":{"test":"is_temperature_value","subject":"self","operator":">=","value":0.45},"set_property":{"ac:temperature":45}},{"filters":{"test":"is_temperature_value","subject":"self","operator":">=","value":0.5},"set_property":{"ac:temperature":50}},{"filters":{"test":"is_temperature_value","subject":"self","operator":">=","value":0.55},"set_property":{"ac:temperature":55}},{"filters":{"test":"is_temperature_value","subject":"self","operator":">=","value":0.6},"set_property":{"ac:temperature":60}},{"filters":{"test":"is_temperature_value","subject":"self","operator":">=","value":0.65},"set_property":{"ac:temperature":65}},{"filters":{"test":"is_temperature_value","subject":"self","operator":">=","value":0.7},"set_property":{"ac:temperature":70}},{"filters":{"test":"is_temperature_value","subject":"self","operator":">=","value":0.75},"set_property":{"ac:temperature":75}},{"filters":{"test":"is_temperature_value","subject":"self","operator":">=","value":0.8},"set_property":{"ac:temperature":80}},{"filters":{"test":"is_temperature_value","subject":"self","operator":">=","value":0.85},"set_property":{"ac:temperature":85}},{"filters":{"test":"is_temperature_value","subject":"self","operator":">=","value":0.9},"set_property":{"ac:temperature":90}},{"filters":{"test":"is_temperature_value","subject":"self","operator":">=","value":0.95},"set_property":{"ac:temperature":95}},{"filters":{"test":"is_temperature_value","subject":"self","operator":">=","value":1},"set_property":{"ac:temperature":100}},{"filters":{"test":"is_temperature_value","subject":"self","operator":">=","value":1.05},"set_property":{"ac:temperature":105}},{"filters":{"test":"is_temperature_value","subject":"self","operator":">=","value":1.1},"set_property":{"ac:temperature":110}},{"filters":{"test":"is_temperature_value","subject":"self","operator":">=","value":1.15},"set_property":{"ac:temperature":115}},{"filters":{"test":"is_temperature_value","subject":"self","operator":">=","value":1.2},"set_property":{"ac:temperature":120}},{"filters":{"test":"is_temperature_value","subject":"self","operator":">=","value":1.25},"set_property":{"ac:temperature":125}},{"filters":{"test":"is_temperature_value","subject":"self","operator":">=","value":1.3},"set_property":{"ac:temperature":130}},{"filters":{"test":"is_temperature_value","subject":"self","operator":">=","value":1.35},"set_property":{"ac:temperature":135}},{"filters":{"test":"is_temperature_value","subject":"self","operator":">=","value":1.4},"set_property":{"ac:temperature":140}},{"filters":{"test":"is_temperature_value","subject":"self","operator":">=","value":1.45},"set_property":{"ac:temperature":145}},{"filters":{"test":"is_temperature_value","subject":"self","operator":">=","value":1.5},"set_property":{"ac:temperature":150}},{"filters":{"test":"is_temperature_value","subject":"self","operator":">=","value":1.55},"set_property":{"ac:temperature":155}},{"filters":{"test":"is_temperature_value","subject":"self","operator":">=","value":1.6},"set_property":{"ac:temperature":160}},{"filters":{"test":"is_temperature_value","subject":"self","operator":">=","value":1.65},"set_property":{"ac:temperature":165}},{"filters":{"test":"is_temperature_value","subject":"self","operator":">=","value":1.7},"set_property":{"ac:temperature":170}},{"filters":{"test":"is_temperature_value","subject":"self","operator":">=","value":1.75},"set_property":{"ac:temperature":175}},{"filters":{"test":"is_temperature_value","subject":"self","operator":">=","value":1.8},"set_property":{"ac:temperature":180}},{"filters":{"test":"is_temperature_value","subject":"self","operator":">=","value":1.85},"set_property":{"ac:temperature":185}},{"filters":{"test":"is_temperature_value","subject":"self","operator":">=","value":1.9},"set_property":{"ac:temperature":190}},{"filters":{"test":"is_temperature_value","subject":"self","operator":">=","value":1.95},"set_property":{"ac:temperature":195}},{"filters":{"test":"is_temperature_value","subject":"self","operator":">=","value":2},"set_property":{"ac:temperature":200}}
+              ]
+            },
+            {
+              "sequence": [
+                {"filters":{"test":"light_level","subject":"self","operator":"equals","value":0},"set_property":{"ac:light_level":0}},{"filters":{"test":"light_level","subject":"self","operator":"equals","value":1},"set_property":{"ac:light_level":1}},{"filters":{"test":"light_level","subject":"self","operator":"equals","value":2},"set_property":{"ac:light_level":2}},{"filters":{"test":"light_level","subject":"self","operator":"equals","value":3},"set_property":{"ac:light_level":3}},{"filters":{"test":"light_level","subject":"self","operator":"equals","value":4},"set_property":{"ac:light_level":4}},{"filters":{"test":"light_level","subject":"self","operator":"equals","value":5},"set_property":{"ac:light_level":5}},{"filters":{"test":"light_level","subject":"self","operator":"equals","value":6},"set_property":{"ac:light_level":6}},{"filters":{"test":"light_level","subject":"self","operator":"equals","value":7},"set_property":{"ac:light_level":7}},{"filters":{"test":"light_level","subject":"self","operator":"equals","value":8},"set_property":{"ac:light_level":8}},{"filters":{"test":"light_level","subject":"self","operator":"equals","value":9},"set_property":{"ac:light_level":9}},{"filters":{"test":"light_level","subject":"self","operator":"equals","value":10},"set_property":{"ac:light_level":10}},{"filters":{"test":"light_level","subject":"self","operator":"equals","value":11},"set_property":{"ac:light_level":11}},{"filters":{"test":"light_level","subject":"self","operator":"equals","value":12},"set_property":{"ac:light_level":12}},{"filters":{"test":"light_level","subject":"self","operator":"equals","value":13},"set_property":{"ac:light_level":13}},{"filters":{"test":"light_level","subject":"self","operator":"equals","value":14},"set_property":{"ac:light_level":14}},{"filters":{"test":"light_level","subject":"self","operator":"equals","value":15},"set_property":{"ac:light_level":15}},{"filters":{"test":"light_level","subject":"self","operator":"equals","value":16},"set_property":{"ac:light_level":16}} 
+              ]
+            },
+            {
+              "sequence": [
+                {"filters":{"test":"is_brightness","subject":"self","operator":">=","value":0},"set_property":{"ac:brightness_level":0}},{"filters":{"test":"is_brightness","subject":"self","operator":">=","value":0.1},"set_property":{"ac:brightness_level":1}},{"filters":{"test":"is_brightness","subject":"self","operator":">=","value":0.2},"set_property":{"ac:brightness_level":2}},{"filters":{"test":"is_brightness","subject":"self","operator":">=","value":0.3},"set_property":{"ac:brightness_level":3}},{"filters":{"test":"is_brightness","subject":"self","operator":">=","value":0.4},"set_property":{"ac:brightness_level":4}},{"filters":{"test":"is_brightness","subject":"self","operator":">=","value":0.5},"set_property":{"ac:brightness_level":5}},{"filters":{"test":"is_brightness","subject":"self","operator":">=","value":0.6},"set_property":{"ac:brightness_level":6}},{"filters":{"test":"is_brightness","subject":"self","operator":">=","value":0.7},"set_property":{"ac:brightness_level":7}},{"filters":{"test":"is_brightness","subject":"self","operator":">=","value":0.8},"set_property":{"ac:brightness_level":8}},{"filters":{"test":"is_brightness","subject":"self","operator":">=","value":0.9},"set_property":{"ac:brightness_level":9}},{"filters":{"test":"is_brightness","subject":"self","operator":">=","value":1},"set_property":{"ac:brightness_level":10}},{"filters":{"test":"is_brightness","subject":"self","operator":">=","value":1.1},"set_property":{"ac:brightness_level":11}},{"filters":{"test":"is_brightness","subject":"self","operator":">=","value":1.2},"set_property":{"ac:brightness_level":12}},{"filters":{"test":"is_brightness","subject":"self","operator":">=","value":1.3},"set_property":{"ac:brightness_level":13}},{"filters":{"test":"is_brightness","subject":"self","operator":">=","value":1.4},"set_property":{"ac:brightness_level":14}},{"filters":{"test":"is_brightness","subject":"self","operator":">=","value":1.5},"set_property":{"ac:brightness_level":15}},{"filters":{"test":"is_brightness","subject":"self","operator":">=","value":1.6},"set_property":{"ac:brightness_level":16}},{"filters":{"test":"is_brightness","subject":"self","operator":">=","value":1.7},"set_property":{"ac:brightness_level":17}},{"filters":{"test":"is_brightness","subject":"self","operator":">=","value":1.8},"set_property":{"ac:brightness_level":18}},{"filters":{"test":"is_brightness","subject":"self","operator":">=","value":1.9},"set_property":{"ac:brightness_level":19}}
+              ]
+            },
+            {
+              "sequence": [
+                {"filters":{"test":"is_temperature_type","subject":"self","operator":"equals","value":"cold"},"set_property":{"ac:temperature_type":0}},{"filters":{"test":"is_temperature_type","subject":"self","operator":"equals","value":"mild"},"set_property":{"ac:temperature_type":1}},{"filters":{"test":"is_temperature_type","subject":"self","operator":"equals","value":"ocean"},"set_property":{"ac:temperature_type":2}},{"filters":{"test":"is_temperature_type","subject":"self","operator":"equals","value":"warm"},"set_property":{"ac:temperature_type":3}}
+              ]
+            },
+            {
+              "sequence": [
+                {"filters":{"test": "is_underground", "subject": "self", "operator": "equals", "value":true},"set_property":{"ac:is_underground":true}}
+              ]
+            },
+            {
+              "sequence": [
+                {"filters":{ "test": "is_biome", "subject": "self", "operator": "equals", "value": "river" },"set_property":{"ac:is_in_river":true}}
+              ]
+            },
+            {
+              "sequence": [
+                {"filters":{ "test": "in_water_or_rain" },"set_property":{"ac:in_water_or_rain":true}}
+              ]
+            }
+          ]
+        },
+        "despawn": {
+          "add": {
+            "component_groups": [ "set_despawn" ]
+          }
+        }
+      }
+    }
+  }

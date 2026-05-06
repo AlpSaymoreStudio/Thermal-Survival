@@ -1,0 +1,12 @@
+{
+    "format_version": "1.21.0",
+    "minecraft:recipe_shaped": {
+        "description": { "identifier": "ts:packed_snow_block" },
+        "tags": ["crafting_table"],
+        "pattern": ["SS", "SS"],
+        "key": {
+            "S": { "item": "ts:packed_snowball" }
+        },
+        "result": { "item": "ts:packed_snow_block" }
+    }
+}

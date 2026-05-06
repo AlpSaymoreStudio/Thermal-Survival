@@ -1,0 +1,70 @@
+{
+    "format_version": "1.18.10",
+    "minecraft:entity": {
+      "description": {
+        "identifier": "ac:rangefinder_ping",
+        "is_spawnable": false,
+        "is_summonable": true,
+        "is_experimental": false,
+        "properties": {
+          "ac:distance": {
+            "type": "int", 
+            "range": [0, 512], 
+            "default": 0,
+            "client_sync": true 
+          }
+        }
+      },
+  
+      "component_groups": {
+        "set_despawn": {
+          "minecraft:instant_despawn":{}
+        }
+      },
+      
+      "components": {
+        "minecraft:collision_box": {
+          "width": 0.0,
+          "height": 0.0
+          },
+        "minecraft:health": {
+          "value": 1,
+          "max": 1
+        },
+        "minecraft:fire_immune": {},
+        "minecraft:type_family": {
+            "family": [ "inanimate" ]
+        },
+        "minecraft:damage_sensor": {
+          "triggers": {
+            "deals_damage": false
+          }
+        },
+        "minecraft:pushable": {
+          "is_pushable": false,
+          "is_pushable_by_piston": false
+        },
+        "minecraft:physics": {
+          "has_gravity": false,
+          "has_collision": false
+        },
+        "minecraft:movement": {
+          "value": 0.0
+        },
+        "minecraft:timer": {
+            "time": [ 10, 10 ],
+            "time_down_event": {
+                "event": "despawn"
+            }
+        }
+      },
+  
+      "events": {
+        "despawn": {
+          "add": {
+            "component_groups": [ "set_despawn" ]
+          }
+        }
+      }
+    }
+  }

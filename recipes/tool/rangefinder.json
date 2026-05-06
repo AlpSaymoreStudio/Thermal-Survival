@@ -1,0 +1,33 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "ac:rangefinder"
+    },
+
+    
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "XYX",
+      "XZX",
+      "XWX"
+    ],
+    "key": {
+      "X": {
+        "item": "minecraft:copper_ingot"
+      },
+      "Y": {
+        "item": "minecraft:amethyst_shard"
+      },
+      "Z": {
+        "item": "minecraft:repeater"
+      },
+      "W": {
+        "item": "minecraft:redstone"
+      }
+    },
+    "result": {
+      "item": "ac:rangefinder"
+    }
+  }
+}

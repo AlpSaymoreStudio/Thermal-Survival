@@ -1,0 +1,91 @@
+{
+    "format_version": "1.21.0",
+    "minecraft:block": {
+        "description": {
+            "identifier": "ts:heater_box",
+            "menu_category": { "category": "construction" },
+            "states": {
+                "ts:heat_level": {
+                    "values": { "min": 0, "max": 4 }
+                },
+                "ts:powered": [false, true]
+            }
+        },
+        "permutations": [
+            {
+                "condition": "q.block_state('ts:powered') == false",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": { "texture": "ts_heater_box_side" },
+                        "up": { "texture": "ts_heater_box_top_off" },
+                        "down": { "texture": "ts_heater_box_bottom" },
+                        "north": { "texture": "ts_heater_box_front_0" },
+                        "south": { "texture": "ts_heater_box_side" }
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('ts:powered') == true && q.block_state('ts:heat_level') == 0",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": { "texture": "ts_heater_box_side" },
+                        "up": { "texture": "ts_heater_box_top_on" },
+                        "down": { "texture": "ts_heater_box_bottom" },
+                        "north": { "texture": "ts_heater_box_front_1" }
+                    },
+                    "minecraft:light_emission": 6
+                }
+            },
+            {
+                "condition": "q.block_state('ts:powered') == true && q.block_state('ts:heat_level') == 1",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": { "texture": "ts_heater_box_side" },
+                        "up": { "texture": "ts_heater_box_top_on" },
+                        "down": { "texture": "ts_heater_box_bottom" },
+                        "north": { "texture": "ts_heater_box_front_2" }
+                    },
+                    "minecraft:light_emission": 9
+                }
+            },
+            {
+                "condition": "q.block_state('ts:powered') == true && q.block_state('ts:heat_level') == 2",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": { "texture": "ts_heater_box_side" },
+                        "up": { "texture": "ts_heater_box_top_on" },
+                        "down": { "texture": "ts_heater_box_bottom" },
+                        "north": { "texture": "ts_heater_box_front_3" }
+                    },
+                    "minecraft:light_emission": 12
+                }
+            },
+            {
+                "condition": "q.block_state('ts:powered') == true && q.block_state('ts:heat_level') >= 3",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": { "texture": "ts_heater_box_side" },
+                        "up": { "texture": "ts_heater_box_top_on" },
+                        "down": { "texture": "ts_heater_box_bottom" },
+                        "north": { "texture": "ts_heater_box_front_4" }
+                    },
+                    "minecraft:light_emission": 15
+                }
+            }
+        ],
+        "components": {
+            "minecraft:display_name": "tile.ts:heater_box.name",
+            "minecraft:destructible_by_mining": { "seconds_to_destroy": 3.5 },
+            "minecraft:destructible_by_explosion": { "explosion_resistance": 6.0 },
+            "minecraft:material_instances": {
+                "*": { "texture": "ts_heater_box_side" },
+                "up": { "texture": "ts_heater_box_top_off" },
+                "down": { "texture": "ts_heater_box_bottom" },
+                "north": { "texture": "ts_heater_box_front_0" }
+            },
+            "minecraft:geometry": { "identifier": "minecraft:geometry.full_block" },
+            "minecraft:map_color": "#B05A2A",
+            "minecraft:light_dampening": 15
+        }
+    }
+}

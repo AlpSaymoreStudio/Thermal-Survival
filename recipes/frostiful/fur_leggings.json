@@ -1,0 +1,10 @@
+{
+    "format_version": "1.21.0",
+    "minecraft:recipe_shaped": {
+        "description": { "identifier": "ts:fur_leggings" },
+        "tags": ["crafting_table"],
+        "pattern": ["FFF", "F F", "F F"],
+        "key": { "F": { "item": "ts:fur_padding" } },
+        "result": { "item": "ts:fur_leggings" }
+    }
+}

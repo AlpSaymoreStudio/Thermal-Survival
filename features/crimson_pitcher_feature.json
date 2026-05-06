@@ -1,0 +1,46 @@
+{
+  "format_version": "1.21.40",
+  "minecraft:single_block_feature": {
+    "description": {
+      "identifier": "ac:crimson_pitcher_feature"
+    },
+    "places_block": [
+      {
+        "block": {
+          "name": "ac:crimson_pitcher",
+          "states": {
+            "ac:open_lid": 3,
+            "ac:has_water": true
+          }
+        },
+        "weight": 1
+      },
+      {
+        "block": {
+          "name": "ac:crimson_pitcher",
+          "states": {
+            "ac:open_lid": 2,
+            "ac:has_water": false
+          }
+        },
+        "weight": 1
+      },
+      {
+        "block": {
+          "name": "ac:crimson_pitcher",
+          "states": {
+            "ac:open_lid": 1,
+            "ac:has_water": false
+          }
+        },
+        "weight": 1
+      }
+    ],
+    "enforce_survivability_rules": true,
+    "enforce_placement_rules": true,
+    "may_replace": [
+      "minecraft:air"
+    ],
+    "randomize_rotation": true
+  }
+}

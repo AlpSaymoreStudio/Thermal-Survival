@@ -1,0 +1,13 @@
+{
+    "format_version": "1.21.0",
+    "minecraft:recipe_shaped": {
+        "description": { "identifier": "ts:frost_wand" },
+        "tags": ["crafting_table"],
+        "pattern": ["  I", " I ", "S  "],
+        "key": {
+            "I": { "item": "ts:icicle" },
+            "S": { "item": "minecraft:stick" }
+        },
+        "result": { "item": "ts:frost_wand" }
+    }
+}

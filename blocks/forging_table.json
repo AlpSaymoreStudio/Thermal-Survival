@@ -1,0 +1,31 @@
+{
+	"format_version": "1.21.10",
+	"minecraft:block": {
+		"description": {
+			"identifier": "ft:forging_table",
+			"menu_category": {
+			  "category": "items"
+			}
+		},
+		"components": {
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 2
+			},
+			"minecraft:light_dampening": 1,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "forging_table",
+					"render_method": "alpha_test",
+					"ambient_occlusion": false
+				}
+			},
+			"minecraft:collision_box": {
+				"origin": [-8, 0, -8],
+				"size": [16, 13, 16]
+			},
+			"minecraft:geometry": "geometry.forging_table",
+			"minecraft:selection_box": false,
+            "minecraft:custom_components": ["ft:forging_table"]
+		}
+	}
+}

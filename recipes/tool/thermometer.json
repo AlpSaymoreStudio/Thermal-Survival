@@ -1,0 +1,30 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "ac:thermometer"
+    },
+
+    
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "YZY",
+      "XZX",
+      "XXX"
+    ],
+    "key": {
+      "X": {
+        "item": "minecraft:copper_ingot"
+      },
+      "Y": {
+        "item": "minecraft:gold_nugget"
+      },
+      "Z": {
+        "item": "minecraft:redstone"
+      }
+    },
+    "result": {
+      "item": "ac:thermometer"
+    }
+  }
+}

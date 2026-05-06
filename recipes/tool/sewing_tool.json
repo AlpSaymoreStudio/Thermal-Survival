@@ -1,0 +1,30 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "ac:sewing_tool"
+    },
+
+    
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "  Y",
+      " XZ",
+      "X Z"
+    ],
+    "key": {
+      "X": {
+        "item": "minecraft:gold_nugget"
+      },
+      "Y": {
+        "item": "minecraft:gold_ingot"
+      },
+      "Z": {
+        "item": "minecraft:string"
+      }
+    },
+    "result": {
+      "item": "ac:sewing_tool"
+    }
+  }
+}

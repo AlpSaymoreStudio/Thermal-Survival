@@ -1,0 +1,18 @@
+{
+    "format_version": "1.21.0",
+    "minecraft:block": {
+        "description": {
+            "identifier": "ts:frozen_torch",
+            "menu_category": { "category": "items" }
+        },
+        "components": {
+            "minecraft:display_name": "tile.ts:frozen_torch.name",
+            "minecraft:light_emission": 14,
+            "minecraft:destructible_by_mining": { "seconds_to_destroy": 0 },
+            "minecraft:material_instances": {
+                "*": { "texture": "ts_frozen_torch", "render_method": "alpha_test", "ambient_occlusion": false }
+            },
+            "minecraft:map_color": "#6ECBF5"
+        }
+    }
+}

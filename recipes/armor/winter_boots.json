@@ -1,0 +1,26 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "ac:winter_boots"
+    },
+
+    
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "Y Y",
+      "X X"
+    ],
+    "key": {
+      "X": {
+        "item": "minecraft:leather"
+      },
+      "Y": {
+        "item": "minecraft:wool"
+      }
+    },
+    "result": {
+      "item": "ac:winter_boots"
+    }
+  }
+}

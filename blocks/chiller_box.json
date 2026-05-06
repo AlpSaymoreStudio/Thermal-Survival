@@ -1,0 +1,28 @@
+{
+    "format_version": "1.21.0",
+    "minecraft:block": {
+        "description": {
+            "identifier": "ts:chiller_box",
+            "menu_category": { "category": "construction" }
+        },
+        "components": {
+            "minecraft:display_name": "tile.ts:chiller_box.name",
+            "minecraft:destructible_by_mining": { "seconds_to_destroy": 3.0 },
+            "minecraft:destructible_by_explosion": { "explosion_resistance": 6.0 },
+            "minecraft:material_instances": {
+                "*": { "texture": "ts_chiller_box_side" },
+                "up": { "texture": "ts_chiller_box_top" },
+                "down": { "texture": "ts_chiller_box_top" },
+                "north": { "texture": "ts_chiller_box_inner" },
+                "south": { "texture": "ts_chiller_box_inner" }
+            },
+            "minecraft:geometry": { "identifier": "minecraft:geometry.full_block" },
+            "minecraft:map_color": "#5B8DC7",
+            "minecraft:light_dampening": 15,
+            "minecraft:crafting_table": {
+                "table_name": "Chiller Box",
+                "crafting_tags": ["crafting_table", "ts_chiller_box"]
+            }
+        }
+    }
+}

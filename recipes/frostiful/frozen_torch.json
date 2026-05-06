@@ -1,0 +1,13 @@
+{
+    "format_version": "1.21.0",
+    "minecraft:recipe_shaped": {
+        "description": { "identifier": "ts:frozen_torch" },
+        "tags": ["crafting_table"],
+        "pattern": ["I", "S"],
+        "key": {
+            "I": { "item": "ts:icicle" },
+            "S": { "item": "minecraft:stick" }
+        },
+        "result": { "item": "ts:frozen_torch", "count": 4 }
+    }
+}

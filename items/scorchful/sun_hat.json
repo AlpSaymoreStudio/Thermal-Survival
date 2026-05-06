@@ -1,0 +1,22 @@
+{
+    "format_version": "1.21.0",
+    "minecraft:item": {
+        "description": {
+            "identifier": "ts:sun_hat",
+            "menu_category": {
+                "category": "equipment"
+            }
+        },
+        "components": {
+            "minecraft:display_name": { "value": "Sun Hat" },
+            "minecraft:icon": { "texture": "ts_sun_hat" },
+            "minecraft:max_stack_size": 1,
+            "minecraft:wearable": {
+                "dispensable": true,
+                "slot": "slot.armor.head",
+                "protection": 0
+            },
+            "minecraft:durability": { "max_durability": 64 }
+        }
+    }
+}

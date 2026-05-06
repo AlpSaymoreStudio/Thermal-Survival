@@ -1,0 +1,30 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "ac:water_flask"
+    },
+
+    
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "XY ",
+      "XZY",
+      "XXX"
+    ],
+    "key": {
+      "X": {
+        "item": "minecraft:leather"
+      },
+      "Y": {
+        "item": "minecraft:string"
+      },
+      "Z": {
+        "item": "minecraft:flint"
+      }
+    },
+    "result": {
+      "item": "ac:water_flask"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+    "format_version": "1.21.0",
+    "minecraft:block": {
+        "description": {
+            "identifier": "ts:rooted_netherrack",
+            "menu_category": { "category": "nature" }
+        },
+        "components": {
+            "minecraft:display_name": "tile.ts:rooted_netherrack.name",
+            "minecraft:destructible_by_mining": { "seconds_to_destroy": 0.5 },
+            "minecraft:destructible_by_explosion": { "explosion_resistance": 0.8 },
+            "minecraft:material_instances": {
+                "*": { "texture": "ts_rooted_netherrack" }
+            },
+            "minecraft:geometry": { "identifier": "minecraft:geometry.full_block" },
+            "minecraft:map_color": "#722222",
+            "minecraft:light_dampening": 15
+        }
+    }
+}

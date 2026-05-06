@@ -1,0 +1,16 @@
+{
+    "format_version": "1.21.0",
+    "minecraft:item": {
+        "description": {
+            "identifier": "ts:fur_padded_chainmail_chestplate",
+            "menu_category": { "category": "equipment" }
+        },
+        "components": {
+            "minecraft:display_name": { "value": "Fur Padded Chainmail Chestplate" },
+            "minecraft:icon": { "texture": "ts_fur_padded_chainmail_chestplate" },
+            "minecraft:max_stack_size": 1,
+            "minecraft:wearable": { "dispensable": true, "slot": "slot.armor.chest", "protection": 7 },
+            "minecraft:durability": { "max_durability": 270 }
+        }
+    }
+}

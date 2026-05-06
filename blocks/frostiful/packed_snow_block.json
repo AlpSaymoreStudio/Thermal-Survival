@@ -1,0 +1,17 @@
+{
+    "format_version": "1.21.0",
+    "minecraft:block": {
+        "description": {
+            "identifier": "ts:packed_snow_block",
+            "menu_category": { "category": "construction" }
+        },
+        "components": {
+            "minecraft:display_name": "tile.ts:packed_snow_block.name",
+            "minecraft:destructible_by_mining": { "seconds_to_destroy": 0.3 },
+            "minecraft:material_instances": {
+                "*": { "texture": "minecraft:snow", "render_method": "opaque" }
+            },
+            "minecraft:map_color": "#FFFFFF"
+        }
+    }
+}

@@ -1,0 +1,39 @@
+{
+  "format_version": "1.21.90",
+  "minecraft:item": {
+    "description": {
+      "identifier": "ac:cool_drink",
+      "menu_category": { 
+        "category": "items"
+			} 
+    },
+
+    "components": {
+			"minecraft:icon": "cool_drink",
+      "minecraft:tags": {
+        "tags": [
+          "minecraft:is_food"
+        ]
+      },
+      "minecraft:use_animation": "drink",
+      "minecraft:use_modifiers": {
+        "use_duration": 1.6,
+        "movement_modifier": 0.35
+      },
+      "minecraft:max_stack_size": 4,
+      "minecraft:food": {
+        "nutrition": 0,
+        "saturation_modifier": 0,
+        "using_converts_to": "glass_bottle"
+      },
+			"adventure_condiment:thirst": {
+				"value": 5,
+				"is_dirty": false
+			},
+      "adventure_condiment:hot_and_cold_drink": {
+        "duration": 9600,
+        "temperature": -40
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "ac:desert_boots"
+    },
+
+    
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "Y Y",
+      "X X"
+    ],
+    "key": {
+      "X": {
+        "item": "minecraft:leather"
+      },
+      "Y": {
+        "item": "minecraft:rabbit_hide"
+      }
+    },
+    "result": {
+      "item": "ac:desert_boots"
+    }
+  }
+}

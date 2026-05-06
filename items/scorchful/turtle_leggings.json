@@ -1,0 +1,22 @@
+{
+    "format_version": "1.21.0",
+    "minecraft:item": {
+        "description": {
+            "identifier": "ts:turtle_leggings",
+            "menu_category": {
+                "category": "equipment"
+            }
+        },
+        "components": {
+            "minecraft:display_name": { "value": "Turtle Knee Pads" },
+            "minecraft:icon": { "texture": "ts_turtle_leggings" },
+            "minecraft:max_stack_size": 1,
+            "minecraft:wearable": {
+                "dispensable": true,
+                "slot": "slot.armor.legs",
+                "protection": 5
+            },
+            "minecraft:durability": { "max_durability": 275 }
+        }
+    }
+}

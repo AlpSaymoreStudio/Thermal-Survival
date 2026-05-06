@@ -1,0 +1,19 @@
+{
+    "format_version": "1.21.0",
+    "minecraft:block": {
+        "description": {
+            "identifier": "ts:cut_blue_ice",
+            "menu_category": { "category": "construction" }
+        },
+        "components": {
+            "minecraft:display_name": "tile.ts:cut_blue_ice.name",
+            "minecraft:destructible_by_mining": { "seconds_to_destroy": 2.8 },
+            "minecraft:material_instances": {
+                "*": { "texture": "ts_cut_blue_ice", "render_method": "blend" }
+            },
+            "minecraft:map_color": "#74A3FF",
+            "minecraft:friction": 0.98,
+            "minecraft:light_dampening": 2
+        }
+    }
+}

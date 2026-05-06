@@ -1,0 +1,27 @@
+{
+	"format_version": "1.21.90",
+	"minecraft:item": {
+		"description": {
+			"identifier": "ac:emberbloom",
+			"menu_category": { 
+			  	"category": "nature",
+				"group": "minecraft:itemGroup.name.flower"
+			} 
+		},
+		"components": {
+			"minecraft:icon": "emberbloom",
+			"minecraft:block_placer": {
+				"block": "ac:emberbloom",
+				"use_on": [
+					"minecraft:dirt",
+					"minecraft:grass_block",
+					"minecraft:coarse_dirt",
+					"minecraft:podzol",
+					"minecraft:mycelium",
+					"minecraft:snow_layer"
+				],
+  				"replace_block_item": true
+			}
+		}
+	}
+}

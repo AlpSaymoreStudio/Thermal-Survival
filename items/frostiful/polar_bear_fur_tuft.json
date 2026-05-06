@@ -1,0 +1,14 @@
+{
+    "format_version": "1.21.0",
+    "minecraft:item": {
+        "description": {
+            "identifier": "ts:polar_bear_fur_tuft",
+            "menu_category": { "category": "nature" }
+        },
+        "components": {
+            "minecraft:display_name": { "value": "Tuft of Polar Bear Fur" },
+            "minecraft:icon": { "texture": "ts_polar_bear_fur_tuft" },
+            "minecraft:max_stack_size": 64
+        }
+    }
+}

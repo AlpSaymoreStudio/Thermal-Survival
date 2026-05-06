@@ -1,0 +1,16 @@
+import "./temperature";
+import "./thirst";
+import "./ui_handler";
+import "./armor";
+import "./water_mechanics";
+import "./api_handler";
+import "./thermometer";
+import "./database";
+import "./crimson_pitcher";
+import "./command_handler";
+import "./rangefinder";
+import "./water_container";
+import "./hot_and_cold_drink";
+import "./scorchful";
+import "./frostiful";
+import "./forging_table_main";

@@ -1,0 +1,28 @@
+{
+"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+		  "identifier": "ft:forging_table"
+		},
+		"tags": [ "crafting_table" ],
+		"pattern": [
+			"XXX",
+			"YZY",
+			"YZY"
+		],
+		"key": {
+			"X": {
+				"item": "minecraft:iron_block"
+			},
+			"Y": {
+				"item": "minecraft:copper_ingot"
+			},
+			"Z": {
+				"item": "minecraft:planks"
+			}
+		},
+		"result": {
+			"item": "ft:forging_table"
+		}
+	}
+}

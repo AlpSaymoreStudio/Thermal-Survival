@@ -1,0 +1,14 @@
+{
+    "format_version": "1.21.0",
+    "minecraft:item": {
+        "description": {
+            "identifier": "ts:frozen_rod",
+            "menu_category": { "category": "items" }
+        },
+        "components": {
+            "minecraft:display_name": { "value": "Frozen Rod" },
+            "minecraft:icon": { "texture": "ts_frozen_rod" },
+            "minecraft:max_stack_size": 64
+        }
+    }
+}

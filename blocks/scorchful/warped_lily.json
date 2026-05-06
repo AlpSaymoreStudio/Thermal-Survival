@@ -1,0 +1,28 @@
+{
+    "format_version": "1.21.0",
+    "minecraft:block": {
+        "description": {
+            "identifier": "ts:warped_lily",
+            "menu_category": { "category": "nature" }
+        },
+        "components": {
+            "minecraft:display_name": "tile.ts:warped_lily.name",
+            "minecraft:destructible_by_mining": { "seconds_to_destroy": 0 },
+            "minecraft:material_instances": {
+                "*": { "texture": "ts_warped_lily", "render_method": "alpha_test", "ambient_occlusion": false }
+            },
+            "minecraft:map_color": "#00CED1",
+            "minecraft:light_dampening": 0,
+            "minecraft:placement_filter": {
+                "conditions": [
+                    {
+                        "allowed_faces": ["up"],
+                        "block_filter": [
+                            { "tags": "q.any_tag('warped_nylium')" }
+                        ]
+                    }
+                ]
+            }
+        }
+    }
+}

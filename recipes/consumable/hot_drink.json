@@ -1,0 +1,33 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shapeless": {
+    "description": {
+    "identifier": "ac:hot_drink"
+    },
+
+    
+    "tags": [ "crafting_table" ],
+    "ingredients": [
+      {
+        "item": "minecraft:glow_berries"
+      },
+      {
+        "item": "minecraft:sugar"
+      },
+      {
+        "item": "minecraft:magma_cream"
+      },
+      {
+        "item": "minecraft:potion"
+      }
+    ],
+	  "unlock": [
+      {
+        "item": "minecraft:potion"
+      }
+    ],
+    "result": {
+      "item": "ac:hot_drink"
+    }
+  }
+}

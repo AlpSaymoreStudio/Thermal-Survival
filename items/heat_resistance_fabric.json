@@ -1,0 +1,16 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:item": {
+		"description": {
+			"identifier": "ac:heat_resistance_fabric",
+			"menu_category": { 
+			  	"category": "items"
+			} 
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "heat_resistance_fabric"
+			}
+		}
+	}
+}

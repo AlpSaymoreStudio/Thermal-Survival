@@ -1,0 +1,36 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "ac:diving_helmet"
+    },
+
+    
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "XZX",
+      "YWY",
+      "V V"
+    ],
+    "key": {
+      "X": {
+        "item": "minecraft:gold_ingot"
+      },
+      "Y": {
+        "item": "minecraft:copper_ingot"
+      },
+      "Z": {
+        "item": "minecraft:turtle_helmet"
+      },
+      "W": {
+        "item": "minecraft:glass_pane"
+      },
+      "V": {
+        "item": "minecraft:iron_nugget"
+      }
+    },
+    "result": {
+      "item": "ac:diving_helmet"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+    "format_version": "1.21.0",
+    "minecraft:recipe_shaped": {
+        "description": { "identifier": "ts:glacial_arrow" },
+        "tags": ["crafting_table"],
+        "pattern": [" I ", " S ", " F "],
+        "key": {
+            "I": { "item": "ts:icicle" },
+            "S": { "item": "minecraft:stick" },
+            "F": { "item": "minecraft:feather" }
+        },
+        "result": { "item": "ts:glacial_arrow", "count": 4 }
+    }
+}

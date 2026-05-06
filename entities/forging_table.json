@@ -1,0 +1,398 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "ft:forging_table",
+			"runtime_identifier": "minecraft:happy_ghast",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false,
+			"properties": {
+				"ft:is_selected": {
+					"type": "bool", 
+					"default": false, 
+					"client_sync": true 
+			  	},
+				"ft:owner_order": {
+					"type": "int",
+					"default": -1,
+					"range": [ -1, 9 ]
+				}
+			}
+		},
+
+		"component_groups": {
+			"setup": {
+				"minecraft:is_collidable": {},
+				"minecraft:collision_box": {
+					"width": 0.9,
+					"height": 0.82
+				},
+				"minecraft:inventory": {
+					"can_be_siphoned_from": false,
+					"container_type": "minecart_chest",
+					"inventory_size": 5,
+					"private": false,
+					"restrict_to_owner": false
+				}
+			},
+			"opened": {
+				"minecraft:collision_box": {
+					"width": 0.0,
+					"height": 0.0
+				},
+				"minecraft:inventory":{
+					"can_be_siphoned_from": false,
+					"container_type": "minecart_chest",
+					"inventory_size": 5,
+					"private": false,
+					"restrict_to_owner": true
+				},
+				"minecraft:entity_sensor": {
+					"subsensors": [
+						{
+							"range": [10, 10],
+							"cooldown": -1,
+							"require_all": false,
+							"event_filters": {
+								"all_of": [
+									{
+										"test": "has_tag",
+										"subject": "other",
+										"value": "ft-table-open-id-0" 
+									},
+									{
+										"test": "int_property",
+										"domain": "ft:owner_order",
+										"subject": "self",
+										"operator": "==",
+										"value": 0
+									},
+									{ 
+										"test": "has_container_open", 
+										"subject": "other", 
+										"operator": "==", 
+										"value": false 
+									}
+								]
+							},
+							"event": "despawn"
+						},
+						{
+							"range": [10, 10],
+							"cooldown": -1,
+							"require_all": false,
+							"event_filters": {
+								"all_of": [
+									{
+										"test": "has_tag",
+										"subject": "other",
+										"value": "ft-table-open-id-1" 
+									},
+									{
+										"test": "int_property",
+										"domain": "ft:owner_order",
+										"subject": "self",
+										"operator": "==",
+										"value": 1
+									},
+									{ 
+										"test": "has_container_open", 
+										"subject": "other", 
+										"operator": "==", 
+										"value": false 
+									}
+								]
+							},
+							"event": "despawn"
+						},
+						{
+							"range": [10, 10],
+							"cooldown": -1,
+							"require_all": false,
+							"event_filters": {
+								"all_of": [
+									{
+										"test": "has_tag",
+										"subject": "other",
+										"value": "ft-table-open-id-2" 
+									},
+									{
+										"test": "int_property",
+										"domain": "ft:owner_order",
+										"subject": "self",
+										"operator": "==",
+										"value": 2
+									},
+									{ 
+										"test": "has_container_open", 
+										"subject": "other", 
+										"operator": "==", 
+										"value": false 
+									}
+								]
+							},
+							"event": "despawn"
+						},
+						{
+							"range": [10, 10],
+							"cooldown": -1,
+							"require_all": false,
+							"event_filters": {
+								"all_of": [
+									{
+										"test": "has_tag",
+										"subject": "other",
+										"value": "ft-table-open-id-3" 
+									},
+									{
+										"test": "int_property",
+										"domain": "ft:owner_order",
+										"subject": "self",
+										"operator": "==",
+										"value": 3
+									},
+									{ 
+										"test": "has_container_open", 
+										"subject": "other", 
+										"operator": "==", 
+										"value": false 
+									}
+								]
+							},
+							"event": "despawn"
+						},
+						{
+							"range": [10, 10],
+							"cooldown": -1,
+							"require_all": false,
+							"event_filters": {
+								"all_of": [
+									{
+										"test": "has_tag",
+										"subject": "other",
+										"value": "ft-table-open-id-4" 
+									},
+									{
+										"test": "int_property",
+										"domain": "ft:owner_order",
+										"subject": "self",
+										"operator": "==",
+										"value": 4
+									},
+									{ 
+										"test": "has_container_open", 
+										"subject": "other", 
+										"operator": "==", 
+										"value": false 
+									}
+								]
+							},
+							"event": "despawn"
+						},
+						{
+							"range": [10, 10],
+							"cooldown": -1,
+							"require_all": false,
+							"event_filters": {
+								"all_of": [
+									{
+										"test": "has_tag",
+										"subject": "other",
+										"value": "ft-table-open-id-5" 
+									},
+									{
+										"test": "int_property",
+										"domain": "ft:owner_order",
+										"subject": "self",
+										"operator": "==",
+										"value": 5
+									},
+									{ 
+										"test": "has_container_open", 
+										"subject": "other", 
+										"operator": "==", 
+										"value": false 
+									}
+								]
+							},
+							"event": "despawn"
+						},
+						{
+							"range": [10, 10],
+							"cooldown": -1,
+							"require_all": false,
+							"event_filters": {
+								"all_of": [
+									{
+										"test": "has_tag",
+										"subject": "other",
+										"value": "ft-table-open-id-6" 
+									},
+									{
+										"test": "int_property",
+										"domain": "ft:owner_order",
+										"subject": "self",
+										"operator": "==",
+										"value": 6
+									},
+									{ 
+										"test": "has_container_open", 
+										"subject": "other", 
+										"operator": "==", 
+										"value": false 
+									}
+								]
+							},
+							"event": "despawn"
+						},
+						{
+							"range": [10, 10],
+							"cooldown": -1,
+							"require_all": false,
+							"event_filters": {
+								"all_of": [
+									{
+										"test": "has_tag",
+										"subject": "other",
+										"value": "ft-table-open-id-7" 
+									},
+									{
+										"test": "int_property",
+										"domain": "ft:owner_order",
+										"subject": "self",
+										"operator": "==",
+										"value": 7
+									},
+									{ 
+										"test": "has_container_open", 
+										"subject": "other", 
+										"operator": "==", 
+										"value": false 
+									}
+								]
+							},
+							"event": "despawn"
+						},
+						{
+							"range": [10, 10],
+							"cooldown": -1,
+							"require_all": false,
+							"event_filters": {
+								"all_of": [
+									{
+										"test": "has_tag",
+										"subject": "other",
+										"value": "ft-table-open-id-8" 
+									},
+									{
+										"test": "int_property",
+										"domain": "ft:owner_order",
+										"subject": "self",
+										"operator": "==",
+										"value": 8
+									},
+									{ 
+										"test": "has_container_open", 
+										"subject": "other", 
+										"operator": "==", 
+										"value": false 
+									}
+								]
+							},
+							"event": "despawn"
+						},
+						{
+							"range": [10, 10],
+							"cooldown": -1,
+							"require_all": false,
+							"event_filters": {
+								"all_of": [
+									{
+										"test": "has_tag",
+										"subject": "other",
+										"value": "ft-table-open-id-9" 
+									},
+									{
+										"test": "int_property",
+										"domain": "ft:owner_order",
+										"subject": "self",
+										"operator": "==",
+										"value": 9
+									},
+									{ 
+										"test": "has_container_open", 
+										"subject": "other", 
+										"operator": "==", 
+										"value": false 
+									}
+								]
+							},
+							"event": "despawn"
+						}
+					]
+				}
+			},
+			"set_despawn": {
+				"minecraft:instant_despawn":{}
+			}
+		},
+			
+		"components": {
+			"minecraft:health": {
+				"value": 1,
+				"max": 0
+			},
+			"minecraft:fire_immune": {
+			},
+			"minecraft:damage_sensor": {
+				"triggers": {
+					"deals_damage": false
+				}
+			},
+			"minecraft:nameable": {
+				"always_show": false,
+				"allow_name_tag_renaming": false
+			},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": false
+			},
+			"minecraft:persistent": {
+			},
+			"minecraft:physics": {
+				"has_gravity": false,
+				"has_collision": false
+			},
+			"minecraft:tameable": {
+			  "probability": 0.0
+			},
+			"minecraft:is_tamed": {}
+		},
+
+		"events": {
+			"minecraft:entity_spawned": {
+				"add": {
+					"component_groups": [ "setup" ]
+				}
+			},
+			"despawn": {
+				"add": {
+					"component_groups": [ "set_despawn" ]
+				}
+			},
+			"set_open": {
+				"add": {
+					"component_groups": [
+						"opened"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"setup"
+					]
+				}
+			}
+		}
+	}
+}

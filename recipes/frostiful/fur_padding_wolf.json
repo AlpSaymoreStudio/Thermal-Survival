@@ -1,0 +1,9 @@
+{
+    "format_version": "1.21.0",
+    "minecraft:recipe_shapeless": {
+        "description": { "identifier": "ts:fur_padding_from_wolf" },
+        "tags": ["crafting_table"],
+        "ingredients": [{ "item": "ts:wolf_fur_tuft" }],
+        "result": { "item": "ts:fur_padding", "count": 2 }
+    }
+}

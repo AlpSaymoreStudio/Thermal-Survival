@@ -1,0 +1,38 @@
+{
+    "format_version": "1.21.0",
+    "minecraft:block": {
+        "description": {
+            "identifier": "ts:red_sand_cauldron",
+            "menu_category": {
+                "category": "construction"
+            },
+            "states": {
+                "ts:fill_level": [
+                    0,
+                    1,
+                    2,
+                    3
+                ]
+            }
+        },
+        "components": {
+            "minecraft:display_name": "tile.ts:red_sand_cauldron.name",
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 2.0
+            },
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 2.0
+            },
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "minecraft:cauldron_side",
+                    "render_method": "opaque"
+                }
+            },
+            "minecraft:geometry": {
+                "identifier": "minecraft:geometry.full_block"
+            },
+            "minecraft:map_color": "#8b3a0f"
+        }
+    }
+}

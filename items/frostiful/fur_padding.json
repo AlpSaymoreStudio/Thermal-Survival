@@ -1,0 +1,14 @@
+{
+    "format_version": "1.21.0",
+    "minecraft:item": {
+        "description": {
+            "identifier": "ts:fur_padding",
+            "menu_category": { "category": "items" }
+        },
+        "components": {
+            "minecraft:display_name": { "value": "Fur Padding" },
+            "minecraft:icon": { "texture": "ts_fur_padding" },
+            "minecraft:max_stack_size": 64
+        }
+    }
+}

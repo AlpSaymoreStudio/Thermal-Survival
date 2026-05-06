@@ -1,0 +1,160 @@
+{
+  "format_version": "1.21.60",
+  "minecraft:block": {
+    "description": {
+      "identifier": "ac:crimson_pitcher",
+      "menu_category": {
+        "category": "nature"
+      },
+			"states": {
+				"ac:open_lid": [ 0, 1, 2, 3 ],
+				"ac:has_water": [ false, true ]
+			},
+			"traits": {
+				"minecraft:placement_direction": {
+					"enabled_states": ["minecraft:cardinal_direction"],
+					"y_rotation_offset": 180
+				}
+			}
+    },
+
+    "components": {
+      "minecraft:collision_box": {
+        "origin": [-2, 0, -2],
+        "size": [4, 15, 4]
+      },
+      "minecraft:selection_box": {
+        "origin": [-4.5, 0, -4.5],
+        "size": [9, 16, 9]
+      },
+      "minecraft:destructible_by_mining": {
+        "seconds_to_destroy": 0.1
+      },
+      "minecraft:destructible_by_explosion": {
+        "explosion_resistance": 0.5
+      },
+      "minecraft:flammable": false,
+      "minecraft:geometry": {
+        "identifier": "geometry.crimson_pitcher",
+        "bone_visibility": {
+          "water": "q.block_state('ac:has_water')"
+        }
+      },
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "crimson_pitcher_body",
+          "render_method": "alpha_test",
+          "ambient_occlusion": false
+        },
+        "water": {
+          "texture": "cauldron_water",
+          "render_method": "alpha_test",
+          "tint_method": "water",
+          "ambient_occlusion": false
+        },
+        "plant": {
+          "texture": "crimson_pitcher_base",
+          "render_method": "alpha_test",
+          "ambient_occlusion": false
+        },
+        "body": {
+          "texture": "crimson_pitcher_body",
+          "render_method": "alpha_test",
+          "ambient_occlusion": false
+        },
+        "cap": {
+          "texture": "crimson_pitcher_head",
+          "render_method": "alpha_test",
+          "ambient_occlusion": false
+        }
+      },
+      "minecraft:map_color": "#242521",
+      "minecraft:liquid_detection": {
+        "detection_rules": [
+          {
+            "liquid_type": "water",
+            "on_liquid_touches": "popped"
+          }
+        ]
+      },
+      "minecraft:placement_filter": {
+        "conditions": [
+          {
+            "allowed_faces": [ "up" ],
+            "block_filter": [
+              "minecraft:netherrack",
+              "minecraft:crimson_nylium",
+              "minecraft:warped_nylium", 
+              "minecraft:soul_sand",
+              "minecraft:soul_soil"
+            ]
+          }
+        ]
+      },
+			"minecraft:tick": {
+				"looping": true,
+				"interval_range": [ 600, 1200 ]
+			},
+      "ac:crimson_pitcher": {}
+    },
+    "permutations": [
+      {
+        "condition": "q.block_state('minecraft:cardinal_direction') == 'north'",
+        "components": {
+          "minecraft:transformation": { "rotation": [0, 0, 0] }
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:cardinal_direction') == 'west'",
+        "components": {
+          "minecraft:transformation": { "rotation": [0, 90, 0] }
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:cardinal_direction') == 'south'",
+        "components": {
+          "minecraft:transformation": { "rotation": [0, 180, 0] }
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:cardinal_direction') == 'east'",
+        "components": {
+          "minecraft:transformation": { "rotation": [0, -90, 0] }
+        }
+      },
+      {
+        "condition": "q.block_state('ac:open_lid') == 1",
+        "components": {
+          "minecraft:geometry": {
+            "identifier": "geometry.crimson_pitcher_open_stage_0",
+            "bone_visibility": {
+              "water": "q.block_state('ac:has_water')"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('ac:open_lid') == 2",
+        "components": {
+          "minecraft:geometry": {
+            "identifier": "geometry.crimson_pitcher_open_stage_1",
+            "bone_visibility": {
+              "water": "q.block_state('ac:has_water')"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('ac:open_lid') == 3",
+        "components": {
+          "minecraft:geometry": {
+            "identifier": "geometry.crimson_pitcher_open_stage_2",
+            "bone_visibility": {
+              "water": "q.block_state('ac:has_water')"
+            }
+          }
+        }
+      }
+    ]
+  }
+}

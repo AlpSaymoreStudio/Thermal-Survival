@@ -1,0 +1,18 @@
+{
+    "format_version": "1.21.0",
+    "minecraft:block": {
+        "description": {
+            "identifier": "ts:cut_packed_ice",
+            "menu_category": { "category": "construction" }
+        },
+        "components": {
+            "minecraft:display_name": "tile.ts:cut_packed_ice.name",
+            "minecraft:destructible_by_mining": { "seconds_to_destroy": 0.5 },
+            "minecraft:material_instances": {
+                "*": { "texture": "ts_cut_packed_ice", "render_method": "blend" }
+            },
+            "minecraft:map_color": "#A8D4F0",
+            "minecraft:friction": 0.98
+        }
+    }
+}
