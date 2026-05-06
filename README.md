@@ -236,4 +236,4 @@ specifically for Bedrock Edition.
 ## 📜 License
 
 This project is licensed under a Custom License.
-See [LICENSE](./LICENSE.md) for details.
+See [LICENSE](./License.md) for details.
