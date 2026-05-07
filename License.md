@@ -58,3 +58,6 @@ owners. Thermal Survival is an independent
 original work for Minecraft Bedrock Edition,
 inspired by and built upon the above works
 with explicit permission.
+Thermal Survival is an original work inspired by the above mods.
+No source code from the Java mods was copied or adapted.
+All Bedrock code was written independently from scratch.
